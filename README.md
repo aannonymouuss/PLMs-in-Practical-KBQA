@@ -44,6 +44,11 @@ Downloading related caches from https://drive.google.com/drive/folders/1dBHtni2c
 
 Downloading PLMs caches: [BERT](https://huggingface.co/bert-base-uncased), [RoBERTa](https://huggingface.co/roberta-base), [XLNET](https://huggingface.co/xlnet-base-cased), [GPT2](https://huggingface.co/gpt2), [ALBERT](https://huggingface.co/albert-base-v2), [DistilBERT](https://huggingface.co/distilbert-base-uncased), [DistilRoBERTa](https://huggingface.co/distilroberta-base), [LUKE](https://huggingface.co/studio-ousia/luke-base), [KEPLER](https://github.com/THU-KEG/KEPLER)
 
+##Running Command
+###classification-based KGQA framework
+1. entity detection
+(1) run ner_label.py to generating labels for similarity-based relation prediction
+(2) for GPT2, run ner.py to train ner; for other models, run ner.py
 
 
 ## Contact
