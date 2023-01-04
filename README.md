@@ -5,6 +5,36 @@ Large-scale pre-trained language models (PLMs) such as BERT have recently achiev
 
 This is the accompanying code & benchmarks for the paper "[An Empirical Study of Pre-trained Language Models in Simple Knowledge Graph Question Answering](null)"
 
+## Requirements
+- simpletransformers
+- sklearn
+- seqeval
+- logging
+- psutil
+- fuzzywuzzy
+- nltk
+- time
+- unicodedata
+- math
+- pickle
+- argparse
+- glob
+- logging
+- itertools
+- sys
+- os
+- random
+- timeit
+- collections
+- functools
+- pandas
+- numpy
+- pytorch
+- json
+- transformers
+- tqdm
+- Python version >= 3.7
+
 ## Package Description
 Important files/folders are described as follows:
 
@@ -13,7 +43,7 @@ PLMs-in-Practical-KBQA/main/
 ├─ entity_detection/: Entity Detection
     ├─ ner.py: Training and inferencing PLMS-based NER, except GPT2
     ├─ train.py: Training and inferencing GPT2-based NER
-    ├─ner_label.py: Generating labels for similarity-based relation prediction
+    ├─  ner_label.py: Generating labels for similarity-based relation prediction
 ├─ entity_linking/: Entity Disambiguation based on Vanilla method
     ├─ entity_linking.py: Disambiguat entity using vanilla method. 
 ├─ entity_disamb/: PLMs-based Entity Disambiguation. Before running the PLMS-based ED model, you need to run entity_linking.py
@@ -44,12 +74,32 @@ Downloading related caches from https://drive.google.com/drive/folders/1dBHtni2c
 
 Downloading PLMs caches: [BERT](https://huggingface.co/bert-base-uncased), [RoBERTa](https://huggingface.co/roberta-base), [XLNET](https://huggingface.co/xlnet-base-cased), [GPT2](https://huggingface.co/gpt2), [ALBERT](https://huggingface.co/albert-base-v2), [DistilBERT](https://huggingface.co/distilbert-base-uncased), [DistilRoBERTa](https://huggingface.co/distilroberta-base), [LUKE](https://huggingface.co/studio-ousia/luke-base), [KEPLER](https://github.com/THU-KEG/KEPLER)
 
-##Running Command
-###classification-based KGQA framework
+## Usage
+### classification-based KGQA framework
 1. entity detection
 (1) run ner_label.py to generating labels for similarity-based relation prediction
-(2) for GPT2, run ner.py to train ner; for other models, run ner.py
-
+(2) for GPT2, run train.py in entity_detection folder to train ner; for other models, run ner.py
+2. entity linking
+(1) run entity_linking.py to generate candidate entities
+(2) run candidate_convert.py to preprocess the output of entity_linking.py
+(3) run run_disamb.py to train and inference entity disambiguation
+(4) run result_convert.py to evaluate entity disambiguation results
+3. relation prediction
+(1) run classify.py to train
+(2) run test_re.py to test
+4. evidence integration
+run final.py to evaluate the result
+### retrieval and ranking-based KGQA framework
+1. entity detection
+same procedure as classification-based KGQA framework, you can use the results directly
+2. entity linking
+same procedure as classification-based KGQA framework, you can use the results directly
+3. relation prediction
+(1) run testdata.py to construct dictionary and replace subject mentions
+(2) run test_json.py to generate JSON files for testing
+(3) run train.py in rel_similarity folder to train and inference similarity-based relation prediction
+4. evidence integration
+run final.py to evaluate the result
 
 ## Contact
 Please consider creating a new issue. We will respond to your questions within a few days.
