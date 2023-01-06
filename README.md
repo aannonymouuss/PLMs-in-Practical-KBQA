@@ -70,7 +70,7 @@ PLMs-in-Practical-KBQA/main/
 
 Note that you need to modify following parametes to select PLMs and Benchmarks: SCALE->[small, medium1, medium2, large], TYPE-> the PLM names, MODEL-> the PLM cache names in FOLDER PLMs-in-Practical-KBQA/main/pretrain
 
-Downloading related caches from https://drive.google.com/drive/folders/1dBHtni2cA4ASMdEGQbn0n5cB-ajc9aXX?usp=sharing
+Downloading related caches from https://drive.google.com/drive/folders/1nJCRoOmkQygrkOIzUnYi87N42RVI_HtS?usp=sharing
 
 Downloading PLMs caches: [BERT](https://huggingface.co/bert-base-uncased), [RoBERTa](https://huggingface.co/roberta-base), [XLNET](https://huggingface.co/xlnet-base-cased), [GPT2](https://huggingface.co/gpt2), [ALBERT](https://huggingface.co/albert-base-v2), [DistilBERT](https://huggingface.co/distilbert-base-uncased), [DistilRoBERTa](https://huggingface.co/distilroberta-base), [LUKE](https://huggingface.co/studio-ousia/luke-base), [KEPLER](https://github.com/THU-KEG/KEPLER)
 
