@@ -6,33 +6,13 @@ Large-scale pre-trained language models (PLMs) such as BERT have recently achiev
 This is the accompanying code & benchmarks for the paper "[An Empirical Study of Pre-trained Language Models in Simple Knowledge Graph Question Answering](null)"
 
 ## Requirements
-- simpletransformers
+Please install the following dependency libraries.
+- simpletransformers == 0.63.7
 - sklearn
-- seqeval
-- logging
-- psutil
 - fuzzywuzzy
 - nltk
-- time
-- unicodedata
-- math
-- pickle
-- argparse
-- glob
-- logging
-- itertools
-- sys
-- os
-- random
-- timeit
-- collections
-- functools
-- pandas
-- numpy
-- pytorch
-- json
-- transformers
-- tqdm
+- pytorch == 1.12
+- transformers == 4.20.1
 - Python version >= 3.7
 
 ## Package Description
@@ -72,9 +52,15 @@ Note that you need to modify following parametes to select PLMs and Benchmarks: 
 
 Downloading related caches from https://drive.google.com/drive/folders/1nJCRoOmkQygrkOIzUnYi87N42RVI_HtS?usp=sharing
 
+https://drive.google.com/drive/folders/1FMfPYe_BfrlE5psYM7yB8E3iD0ZjGSwH?usp=sharing
+
 Downloading PLMs caches: [BERT](https://huggingface.co/bert-base-uncased), [RoBERTa](https://huggingface.co/roberta-base), [XLNET](https://huggingface.co/xlnet-base-cased), [GPT2](https://huggingface.co/gpt2), [ALBERT](https://huggingface.co/albert-base-v2), [DistilBERT](https://huggingface.co/distilbert-base-uncased), [DistilRoBERTa](https://huggingface.co/distilroberta-base), [LUKE](https://huggingface.co/studio-ousia/luke-base), [KEPLER](https://github.com/THU-KEG/KEPLER)
 
 ## Usage
+Please download the related caches before running the code.
+
+Downloading indexes and data to folders ```indexes mydata mydata1```. https://drive.google.com/drive/folders/1nJCRoOmkQygrkOIzUnYi87N42RVI_HtS?usp=sharing
+
 ### classification-based KGQA framework
 #### 1. entity detection
 (1) run ner_label.py to generating labels for similarity-based relation prediction  
