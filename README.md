@@ -59,33 +59,39 @@ Downloading KGs to folders ```kb_105M kb_202M```. https://drive.google.com/drive
 Downloading PLMs caches to ```pretrain```: [BERT](https://huggingface.co/bert-base-uncased), [RoBERTa](https://huggingface.co/roberta-base), [XLNET](https://huggingface.co/xlnet-base-cased), [GPT2](https://huggingface.co/gpt2), [ALBERT](https://huggingface.co/albert-base-v2), [DistilBERT](https://huggingface.co/distilbert-base-uncased), [DistilRoBERTa](https://huggingface.co/distilroberta-base), [LUKE](https://huggingface.co/studio-ousia/luke-base), [KEPLER](https://github.com/THU-KEG/KEPLER)
 
 Note that you can following parametes in python file to select PLMs and Benchmarks:
-SCALE=[small, medium1, medium2, large], TYPE-> the PLM names, MODEL-> the PLM cache names in FOLDER PLMs-in-Practical-KBQA/main/pretrain
+```
+SCALE= BENCHMARK NAME, e.g. small, medium1, medium2, large
+TYPE = PLM NAME, e.g. bert, roberta, xlnet, albert, distilbert, distilroberta, luke, kepler
+MODEL= PLM CACHE NAME, e.g. bert-base-uncased  # names in FOLDER PLMs-in-Practical-KBQA/main/pretrain
+```
 
-### classification-based KGQA framework
+### Classification-based KGQA Framework
+If you want to implement KGQA_CL framework, please follow these steps.
 #### 1. entity detection
-(1) run ner_label.py to generating labels for similarity-based relation prediction  
-(2) for GPT2, run train.py in entity_detection folder to train ner; for other models, run ner.py
+(1) Run ```ner_label.py``` to generating labels for similarity-based relation prediction  
+(2) For GPT2, run ```train.py``` in entity_detection folder to train ner; for other models, run ner.py
 #### 2. entity linking
-(1) run entity_linking.py to generate candidate entities  
-(2) run candidate_convert.py to preprocess the output of entity_linking.py  
-(3) run run_disamb.py to train and inference entity disambiguation  
-(4) run result_convert.py to evaluate entity disambiguation results
+(1) Run ```entity_linking.py``` to generate candidate entities  
+(2) Run ```candidate_convert.py``` to preprocess the output of entity_linking.py  
+(3) Run ```run_disamb.py``` to train and inference entity disambiguation  
+(4) Run ```result_convert.py``` to evaluate entity disambiguation results
 #### 3. relation prediction
-(1) run classify.py to train  
-(2) run test_re.py to test  
+(1) Run ```classify.py``` to train  
+(2) Run ```test_re.py``` to test  
 #### 4. evidence integration
-run final.py to evaluate the result
-### retrieval and ranking-based KGQA framework
+Run ```final.py``` to evaluate the result
+### Retrieval and Ranking-based KGQA Framework
+If you want to implement KGQA_RR framework, please follow these steps.
 #### 1. entity detection
-same procedure as classification-based KGQA framework, you can use the results directly
+Same procedure as classification-based KGQA framework, you can use the results directly
 #### 2. entity linking
-same procedure as classification-based KGQA framework, you can use the results directly
+Same procedure as classification-based KGQA framework, you can use the results directly
 #### 3. relation prediction
-(1) run testdata.py to construct dictionary and replace subject mentions  
-(2) run test_json.py to generate JSON files for testing  
-(3) run train.py in rel_similarity folder to train and inference similarity-based relation prediction
+(1) Run ```testdata.py``` to construct dictionary and replace subject mentions  
+(2) Run ```test_json.py``` to generate JSON files for testing  
+(3) Run ```train.py``` in rel_similarity folder to train and inference similarity-based relation prediction
 #### 4. evidence integration
-run final.py to evaluate the result
+Run ```final.py``` to evaluate the result
 
 ## Contact
 Please consider creating a new issue. We will respond to your questions within a few days.
