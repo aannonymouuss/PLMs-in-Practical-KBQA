@@ -48,18 +48,18 @@ PLMs-in-Practical-KBQA/main/
 ├─ kb_202M: Benchmark
 ```
 
-Note that you need to modify following parametes to select PLMs and Benchmarks: SCALE->[small, medium1, medium2, large], TYPE-> the PLM names, MODEL-> the PLM cache names in FOLDER PLMs-in-Practical-KBQA/main/pretrain
-
-Downloading related caches from https://drive.google.com/drive/folders/1nJCRoOmkQygrkOIzUnYi87N42RVI_HtS?usp=sharing
-
-https://drive.google.com/drive/folders/1FMfPYe_BfrlE5psYM7yB8E3iD0ZjGSwH?usp=sharing
-
-Downloading PLMs caches: [BERT](https://huggingface.co/bert-base-uncased), [RoBERTa](https://huggingface.co/roberta-base), [XLNET](https://huggingface.co/xlnet-base-cased), [GPT2](https://huggingface.co/gpt2), [ALBERT](https://huggingface.co/albert-base-v2), [DistilBERT](https://huggingface.co/distilbert-base-uncased), [DistilRoBERTa](https://huggingface.co/distilroberta-base), [LUKE](https://huggingface.co/studio-ousia/luke-base), [KEPLER](https://github.com/THU-KEG/KEPLER)
 
 ## Usage
 Please download the related caches before running the code.
 
-Downloading indexes and data to folders ```indexes mydata mydata1```. https://drive.google.com/drive/folders/1nJCRoOmkQygrkOIzUnYi87N42RVI_HtS?usp=sharing
+Downloading indexes and datas to folders ```indexes mydata mydata1```. https://drive.google.com/drive/folders/1nJCRoOmkQygrkOIzUnYi87N42RVI_HtS?usp=sharing
+
+Downloading KGs to folders ```kb_105M kb_202M```. https://drive.google.com/drive/folders/1FMfPYe_BfrlE5psYM7yB8E3iD0ZjGSwH?usp=sharing
+
+Downloading PLMs caches to ```pretrain```: [BERT](https://huggingface.co/bert-base-uncased), [RoBERTa](https://huggingface.co/roberta-base), [XLNET](https://huggingface.co/xlnet-base-cased), [GPT2](https://huggingface.co/gpt2), [ALBERT](https://huggingface.co/albert-base-v2), [DistilBERT](https://huggingface.co/distilbert-base-uncased), [DistilRoBERTa](https://huggingface.co/distilroberta-base), [LUKE](https://huggingface.co/studio-ousia/luke-base), [KEPLER](https://github.com/THU-KEG/KEPLER)
+
+Note that you can following parametes in python file to select PLMs and Benchmarks:
+SCALE=[small, medium1, medium2, large], TYPE-> the PLM names, MODEL-> the PLM cache names in FOLDER PLMs-in-Practical-KBQA/main/pretrain
 
 ### classification-based KGQA framework
 #### 1. entity detection
